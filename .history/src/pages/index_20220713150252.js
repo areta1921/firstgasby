@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -6,11 +7,11 @@ function HomePage() {
   return (
     <Layout pageHeading="home" pageTitle="home">
       <p>This is children test</p>
-      <StaticImage src="https://cdn.britannica.com/60/8160-050-08CCEABC/German-shepherd.jpg"
-      alt="oops" />
-      <StaticImage src="../images/icon.png" alt="oops"/>
+      <StaticImag
+        src="https://cdn.pixabay.com/photo/2016/02/19/15/46/labrador-retriever-1210559__480.jpg"
+      />
     </Layout>
   );
 }
- 
+
 export default HomePage;

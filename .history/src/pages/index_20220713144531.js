@@ -1,12 +1,14 @@
 import React from "react";
+import { Link } from "gatsby";
 import Layout from "../components/layout";
 
-function AboutPage() {
+
+function HomePage() {
   return (
-    <Layout pageHeading="about" pageTitle="About Us" >
+    <Layout pageHeading="home" pageTitle="home" >
     <p>This is children test</p>
   </Layout>
   );
 }
 
-export default AboutPage;
+export default HomePage;

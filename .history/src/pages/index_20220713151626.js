@@ -6,9 +6,8 @@ function HomePage() {
   return (
     <Layout pageHeading="home" pageTitle="home">
       <p>This is children test</p>
-      <StaticImage src="https://cdn.britannica.com/60/8160-050-08CCEABC/German-shepherd.jpg"
+      <StaticImage src="retriever-1210559__480.jpg"
       alt="oops" />
-      <StaticImage src="../images/icon.png" alt="oops"/>
     </Layout>
   );
 }

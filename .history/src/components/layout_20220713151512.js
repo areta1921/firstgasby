@@ -1,4 +1,4 @@
-import React, { children } from "react";
+import React, { Children } from "react";
 import { Link } from "gatsby";
 import {container,heading,navLinks,navLinkItem,navLinkText} from './layout.module.css'
 
