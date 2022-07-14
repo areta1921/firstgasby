@@ -18,11 +18,16 @@ function Blog({data}) {
 }
 
 export const query = graphql`
-  query {
-    allFile(filter: { sourceInstanceName: { eq: "blog" } }) {
+query  {
+    allMdx {
       nodes {
-        name
-      }    
+        frontmatter {
+          date(formatString: "dddd, MMMM Do YYYY")
+          title
+        }
+        id
+        body
+      }
     }
   }
 `;
