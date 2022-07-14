@@ -2,22 +2,13 @@ import React from "react";
 import Layout from "../../components/layout";
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import gatsby
 
 function BlogPost({ data }) {
-  const image = getImage(data.mdx.frontmatter.hero_image);
-  console.log(image);
+  console.log(data);
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
       <p>{data.mdx.frontmatter.date}</p>
-      <GatsbyImage image={image} alt={data.mdx.frontmatter.hero_image_alt} />
-      <p>
-        Credit:{" "}
-        <a href={data.mdx.frontmatter.hero_image_credit_link}>
-          {data.mdx.frontmatter.hero_image_credit_text}
-        </a>
-      </p>
-
       <MDXRenderer>{data.mdx.body}</MDXRenderer>
     </Layout>
   );
@@ -34,10 +25,7 @@ export const query = graphql`
         hero_image_credit_text
         hero_image {
           childImageSharp {
-            gatsbyImageData(
-              aspectRatio: 1.78
-              transformOptions: { cropFocus: ATTENTION }
-            )
+            gatsbyImageData
           }
         }
       }
